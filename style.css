@@ -1,0 +1,166 @@
+/* Overall styles */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #98C0BDff, #9E81D3ff);
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 450px;
+    background: #fff;
+    margin: 75px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.img-top {
+    max-width: 75%;
+}
+
+.todo-app h1 {
+    color: #9E81D3ff;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFEEE6ff;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 2;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+@keyframes shake {
+    0% {
+        margin-left: 0rem;
+    }
+
+    25% {
+        margin-left: 0.5rem;
+    }
+
+    75% {
+        margin-left: -0.5rem;
+    }
+
+    100% {
+        margin-left: 0rem;
+    }
+}
+
+.invalid {
+    animation: shake 0.2s ease-in-out 0s 2;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 30px;
+    background: #98C0BDff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+button:active:focus {
+    top: 1px;
+    background: rgb(119, 149, 147);
+}
+
+.task-list {
+    text-align: left;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    border-bottom: rgba(182, 164, 224, 0.396) solid 1px;
+}
+
+li:last-child {
+    border: none;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(https://raw.githubusercontent.com/CarolCosta9/img/main/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+.checked {
+    color: #555;
+    text-decoration: line-through;
+    font-style: italic;
+    opacity: 70%;
+}
+
+.checked::before {
+    background-image: url(https://raw.githubusercontent.com/CarolCosta9/img/main/images/checked.png);
+}
+
+#task-done {
+    display: none;
+}
+
+#task-done h2 {
+    flex: 1;
+    color: #fff;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    font-style: italic;
+    border: #98C0BDff solid 1px;
+    background-color: #98C0BDff;
+    padding: 6px 12px 6px 12px;
+    border-radius: 30px;
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    color: #F98674ff;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #FFEEE6ff;
+}
